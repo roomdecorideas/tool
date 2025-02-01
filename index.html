@@ -24,15 +24,50 @@
             let inputText = document.getElementById("inputText").value;
             let lines = inputText.split("\n").filter(line => line.trim().length > 0);
             let outputHTML = "";
+            let subheadingCount = 0;
 
             if (lines.length > 0) {
                 outputHTML += `<h1>${lines[0].trim()}</h1>\n`;
+                outputHTML += `<img src='room-decor-ideas0.png' alt='Beautiful Room Decor' loading='lazy'>\n`;
                 lines.shift();
             }
 
             lines.forEach(line => {
                 line = line.trim();
                 if (/^##\s/.test(line) || line.length < 50) {
+                    subheadingCount++;
+
+                    if (subheadingCount === 1) {
+                        outputHTML += `<center><script type="text/javascript">
+                    	atOptions = {
+	                	'key' : '28e0381782b75d3d6fdd3c563dd50869',
+	                	'format' : 'iframe',
+	                	'height' : 250,
+	                	'width' : 300,
+		                'params' : {}
+	                    };
+                        </script>
+                    <script type="text/javascript" src="//roastwearwritten.com/28e0381782b75d3d6fdd3c563dd50869/invoke.js"></script></center>\n`;
+                    }
+                    if (subheadingCount === 5) {
+                        outputHTML += `<center><script type="text/javascript">
+	                    atOptions = {
+	                	'key' : '11ca86bac7de1dc7b1e4e8e83b43b642',
+	                	'format' : 'iframe',
+	                	'height' : 250,
+	                	'width' : 300,
+	                	'params' : {}
+	                    };
+                        </script>
+                    <script type="text/javascript" src="//roastwearwritten.com/11ca86bac7de1dc7b1e4e8e83b43b642/invoke.js"></script></center>\n`;
+                    }
+                    if (subheadingCount === 9) {
+                        outputHTML += `<center>
+                        <script async src="//roastwearwritten.com/9510d3602b56c57cff4611848c6319bb/invoke.js"></script>
+                        <div id="container-9510d3602b56c57cff4611848c6319bb"></div>
+                        </center>\n`;
+                    }
+
                     outputHTML += `<h2>${line.replace(/^##\s*/, '')}</h2>\n`;
                 } else {
                     outputHTML += `<p>${line}</p>\n`;
@@ -51,13 +86,26 @@
                 </head>
                 <body>
                     <div class='container'>
-                        <img src='room-decor-ideas0.png' alt='Beautiful Room Decor' loading='lazy'>
+                    <center><script type="text/javascript">
+	                atOptions = {
+	            	'key' : '32417884c3de3b64cea14b0307a6b0c1',
+	            	'format' : 'iframe',
+	            	'height' : 250,
+	            	'width' : 300,
+	            	'params' : {}
+                	};
+                    </script>
+                    <script type="text/javascript" src="//roastwearwritten.com/32417884c3de3b64cea14b0307a6b0c1/invoke.js"></script></center>
                         ${outputHTML}
                         <img src='room-decor-ideas1.png' alt='Room Decor Example' loading='lazy'>
                         <img src='room-decor-ideas2.png' alt='Room Decor Example' loading='lazy'>
+                        <center><script async src="//roastwearwritten.com/9510d3602b56c57cff4611848c6319bb/invoke.js"></script>
+                        <div id="container-9510d3602b56c57cff4611848c6319bb"></div></center>
                         <img src='room-decor-ideas3.png' alt='Modern Room Decor' loading='lazy'>
                         <img src='room-decor-ideas4.png' alt='Cozy Room Design' loading='lazy'>
                         <img src='room-decor-ideas5.png' alt='Elegant Room Interior' loading='lazy'>
+                        <center><script async src="//roastwearwritten.com/7f6b926e1bf322fbcf1e5d6c882bc5e7/invoke.js"></script>
+                        <div id="container-7f6b926e1bf322fbcf1e5d6c882bc5e7"></div></center>
                     </div>
                 </body>
                 </html>`;
